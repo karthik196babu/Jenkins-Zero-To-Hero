@@ -1,67 +1,38 @@
-# Spring Boot based Java web application
- 
-This is a simple Sprint Boot based Java application that can be built using Maven. Sprint Boot dependencies are handled using the pom.xml 
-at the root directory of the repository.
+# Simple Spring Boot Application - A Quick Start Guide
 
-This is a MVC architecture based application where controller returns a page with title and message attributes to the view.
+It is an approach to develop spring based application with very less configuration. 
+It provides defaults for code and annotation configuration to quick start new spring projects within no time.
 
-## Execute the application locally and access it using your browser
+Spring Boot automatically configures required classes depending on the libraries on its classpath.
 
-Checkout the repo and move to the directory
+A spring boot application can be created in three different ways
 
-```
-git clone https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero/java-maven-sonar-argocd-helm-k8s/sprint-boot-app
-cd java-maven-sonar-argocd-helm-k8s/sprint-boot-app
-```
+    Spring boot initialize web interface
 
-Execute the Maven targets to generate the artifacts
+    Spring boot CLI
 
-```
-mvn clean package
-```
+    Spring boot using spring tool suite IDE
 
-The above maven target stroes the artifacts to the `target` directory. You can either execute the artifact on your local machine
-(or) run it as a Docker container.
+# Content of Quick Start Guide
 
-** Note: To avoid issues with local setup, Java versions and other dependencies, I would recommend the docker way. **
-
-
-### Execute locally (Java 11 needed) and access the application on http://localhost:8080
-
-```
-java -jar target/spring-boot-web.jar
-```
-
-### The Docker way
-
-Build the Docker Image
-
-```
-docker build -t ultimate-cicd-pipeline:v1 .
-```
-
-```
-docker run -d -p 8010:8080 -t ultimate-cicd-pipeline:v1
-```
-
-Hurray !! Access the application on `http://<ip-address>:8010`
-
-
-## Next Steps
-
-### Configure a Sonar Server locally
-
-```
-apt install unzip
-adduser sonarqube
-wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
-unzip *
-chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
-chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
-cd sonarqube-9.4.0.54424/bin/linux-x86-64/
-./sonar.sh start
-```
-
-Hurray !! Now you can access the `SonarQube Server` on `http://<ip-address>:9000` 
-
-
+ - @ExceptionHandler
+ - @ControllerAdvice
+ - @RestControllerAdvice
+ - @ResponseBody
+ - application.yaml
+ - Interceptor
+ - @Component
+ - @Service
+ - @Repository
+ - @Configuration
+ - @Bean
+ - @Value
+ - @ConfigurationProperties
+ - How to use multiple Yaml Files
+ - @Autowired
+ - @Qualifier
+ - @Primary
+ - @Required
+ - Autowire by Properties / Autowire by Name
+ - Autowire by Setter / Autowire by Type
+ - Autowire by Constructor
